@@ -1,0 +1,16 @@
+{
+  "name": "backend-chai-code",
+  "version": "1.0.0",
+  "description": "Chai-code-turtorial",
+  "keywords": [
+    "Chai-code-backend"
+  ],
+  "license": "ISC",
+  "author": "Rishabh",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
