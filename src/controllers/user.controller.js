@@ -203,7 +203,7 @@ return res.status(200).clearCookie('accessToken', options).clearCookie('refreshT
 const refreshAccessToken = asyncHandler(async (req, res) => {
     const incomingRefreshToken = req.cookies.refreshToken || req.body.refreshToken;
 
-    if(incomingRefreshToken){
+    if(!incomingRefreshToken){
         throw new APIError(401, "Unauthorized access - Refresh token is required");
     }
 
