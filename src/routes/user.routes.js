@@ -18,8 +18,12 @@ router.route('/refresh-token').post(refreshAccessToken);
 router.route('/change-password').post(verifyJWT, changeUserPassword);
 router.route('/current-user').get(verifyJWT, getCurrentUser);
 router.route('/update-account').patch(verifyJWT, updateAccountDetails);
+
+
 router.route('/avatar').patch(verifyJWT, upload.single('avatar'), updateUserAvator);
 router.route('/cover-image').patch(verifyJWT, upload.single('coverImage'), updateUserCoverImage);
+
+
 router.route("/c/:userName").get(verifyJWT, getUserChannelProfile);
 router.route("/history").get(verifyJWT, getWatchHistory)
 
